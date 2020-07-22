@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Solution {
-    public String solution(int num) {
+    public static String solution(int num) {
         String answer = "";
         
 		if(num%2 ==0){
