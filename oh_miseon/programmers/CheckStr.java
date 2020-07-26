@@ -1,7 +1,7 @@
 import java.util.regex.*;
 
 class CheckStr {
-    public boolean CheckStr(String s) {
+    public boolean solution(String s) {
         boolean answer = true;
         
 		String reg = "^[0-9]*$";
@@ -31,4 +31,9 @@ class CheckStr {
         return answer;
 		
     }
+	
+     public static void main(String[] args) {
+		CheckStr checkStr = new CheckStr();
+		System.out.println(checkStr.solution("a1234"));
+	}	
 }
