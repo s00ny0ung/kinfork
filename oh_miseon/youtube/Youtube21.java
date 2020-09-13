@@ -24,8 +24,8 @@ public class Youtube21 {
 			
 			if(1 <= number && number <= 100){
 				
-				if(resultList.indexOf(number) == -1){
-					resultList.add(number);
+				//if(resultList.indexOf(number) == -1){
+				if(!resultList.contains(number)){			  resultList.add(number);
 				}
 				
 			}else{				
