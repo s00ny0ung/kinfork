@@ -4,6 +4,7 @@ public class Youtube21 {
 	
 	public static void main(String[] args){
 		
+		/*
 		List<Integer> resultList = new ArrayList<Integer>();
 		
 		System.out.println("if you stop program, input 0");
@@ -31,6 +32,24 @@ public class Youtube21 {
 			}else{				
 				System.out.println("input the numbers. less than 100.");
 			}
+		}
+		*/
+		Set<Integer> tempList = new LinkedHashSet<>();
+		System.out.println("if you stop program, input 0");
+		Scanner scanner = new Scanner(System.in);
+		
+		while(true) {
+			int tempNum = scanner.nextInt();
+			
+			if(tempNum == 0) {
+				break;
+			} else if(tempNum >= 1 && tempNum <= 100) {
+				tempList.add(tempNum);
+			}
+		}
+		
+		for(int num : tempList) {
+			System.out.print(num);
 		}
 	}
 }
