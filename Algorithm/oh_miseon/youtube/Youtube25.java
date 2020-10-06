@@ -17,8 +17,17 @@ class Youtube25 {
 	public static void main(String[] args){
 		
 		Scanner sc = new Scanner(System.in);
+		int count = 0;
 		int num = sc.nextInt();
 		
+		int tempNum = num;
+		int temp = 0;
+		do{
+			temp = tempNum/10 + tempNum %10;
+			tempNum = tempNum%10 * 10 + (temp %10);
+			count++;
+		}while(tempNum!=num);
 		
+		System.out.println(count);
 	}
 }
