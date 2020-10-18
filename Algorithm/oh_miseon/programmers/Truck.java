@@ -1,12 +1,40 @@
 package com.aim.eos.client.portal;
+import java.util.*;
 
 public class Truck {
 	
 	// 1초에 1만큼 움직임.
 	
 	public int solution(int bridge_length, int weight, int[] truck_weights) {
-		int answer = 0;
-		return answer;
+		int sec = 0;
+		Queue<Integer> bridge = new ArrayDeque<Integer>();
+		for(int i=0; i<bridge_length; i++) {
+			bridge.add(0);
+		}
+		
+		int sum = 0;
+		int idx= 0;
+		while(!bridge.isEmpty()) {
+			sec++;
+			int previousTruck = bridge.poll();
+			sum -= previousTruck;
+
+			int truck = truck_weights[idx];
+			
+			if(sum + truck <= weight) {
+				sum += truck;
+				bridge.add(truck);
+				idx++;
+			}else {
+				bridge.add(0);
+			}
+			
+			if(idx == truck_weights.length) {
+				break;
+			}
+		}
+		
+		return sec + bridge_length;
 	}
 
 	public static void main(String[] args) {
