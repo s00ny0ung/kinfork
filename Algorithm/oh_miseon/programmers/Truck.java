@@ -1,4 +1,3 @@
-package com.aim.eos.client.portal;
 import java.util.*;
 
 public class Truck {
